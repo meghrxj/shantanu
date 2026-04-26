@@ -19,20 +19,29 @@ export default function ClientsPage() {
 
       <section className="section-pad">
         <div className="container-x">
-          <div className="mx-auto grid max-w-3xl grid-cols-2 gap-px bg-line/60 [&>*:last-child:nth-child(odd)]:col-span-2 [&>*:last-child:nth-child(odd)]:justify-self-center [&>*:last-child:nth-child(odd)]:w-1/2">
-  {CLIENT_LOGOS.map((src, i) => (
-    <div
-      key={i}
-      className="flex aspect-[16/9] items-center justify-center bg-white p-8"
-    >
-      <img
-        src={src}
-        alt=""
-        aria-hidden="true"
-        className="max-h-full max-w-full object-contain"
-      />
+          <div className="mx-auto max-w-3xl">
+  <div className="grid grid-cols-2 gap-px bg-line/60">
+    {CLIENT_LOGOS.slice(0, CLIENT_LOGOS.length - (CLIENT_LOGOS.length % 2)).map((src, i) => (
+      <div
+        key={i}
+        className="flex aspect-[16/9] items-center justify-center bg-white p-8"
+      >
+        <img src={src} alt="" aria-hidden="true" className="max-h-full max-w-full object-contain" />
+      </div>
+    ))}
+  </div>
+  {CLIENT_LOGOS.length % 2 === 1 && (
+    <div className="mt-px flex justify-center">
+      <div className="flex aspect-[16/9] w-1/2 items-center justify-center bg-white p-8">
+        <img
+          src={CLIENT_LOGOS[CLIENT_LOGOS.length - 1]}
+          alt=""
+          aria-hidden="true"
+          className="max-h-full max-w-full object-contain"
+        />
+      </div>
     </div>
-  ))}
+  )}
 </div>
         </div>
       </section>
