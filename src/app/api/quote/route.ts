@@ -26,7 +26,6 @@ export async function POST(req: Request) {
     // eslint-disable-next-line no-console
     console.log("[shantanu/quote] new submission", submission);
 
-    /*
     // === Wire-up to Google Sheets / Excel (uncomment when ready) ===
     if (process.env.SHEET_WEBHOOK_URL) {
       await fetch(process.env.SHEET_WEBHOOK_URL, {
@@ -35,7 +34,7 @@ export async function POST(req: Request) {
         body: JSON.stringify(submission),
       });
     }
-    */
+    
 
     return NextResponse.json({ ok: true }, { status: 200 });
   } catch (err) {
