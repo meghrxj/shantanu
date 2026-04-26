@@ -34,7 +34,7 @@ export function ClientStrip({ headline }: { headline?: string }) {
                   src={src}
                   alt=""
                   aria-hidden="true"
-                  className="max-h-full max-w-full object-contain opacity-70 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0"
+                  className="max-h-full max-w-full object-contain"
                   loading="lazy"
                 />
               </div>
