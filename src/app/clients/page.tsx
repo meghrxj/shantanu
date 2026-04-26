@@ -19,11 +19,11 @@ export default function ClientsPage() {
 
       <section className="section-pad">
         <div className="container-x">
-          <div className="mx-auto flex max-w-2xl flex-col gap-px bg-line/60">
+          <div className="mx-auto grid max-w-3xl grid-cols-2 gap-px bg-line/60 [&>*:last-child:nth-child(odd)]:col-span-2 [&>*:last-child:nth-child(odd)]:justify-self-center [&>*:last-child:nth-child(odd)]:w-1/2">
   {CLIENT_LOGOS.map((src, i) => (
     <div
       key={i}
-      className="flex aspect-[16/6] items-center justify-center bg-white p-8"
+      className="flex aspect-[16/9] items-center justify-center bg-white p-8"
     >
       <img
         src={src}
