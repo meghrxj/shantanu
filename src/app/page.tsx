@@ -186,8 +186,7 @@ function Heritage() {
             — Built across two decades
           </p>
           <p className="mt-10 font-display text-[32px] leading-[1.18] text-cream sm:text-[44px] lg:text-[56px]">
-            &ldquo;For twenty years, we&apos;ve supplied the plants that
-            built Pirangut.&rdquo;
+            &ldquo;For twenty years, we&apos;ve supplied & support major industrial companies in Pune.&rdquo;
           </p>
           <p className="mt-10 text-[12px] uppercase tracking-[0.22em] text-cream/45">
             — Established {SITE.established}
