@@ -27,13 +27,15 @@ export async function POST(req: Request) {
     console.log("[shantanu/quote] new submission", submission);
 
     // === Wire-up to Google Sheets / Excel (uncomment when ready) ===
-    if (process.env.SHEET_WEBHOOK_URL) {
-      await fetch(process.env.SHEET_WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(submission),
-      });
-    }
+  if (process.env.SHEET_WEBHOOK_URL) {
+  const r = await fetch(process.env.SHEET_WEBHOOK_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(submission),
+  });
+  const text = await r.text();
+  console.log("[shantanu/quote] sheet status:", r.status, "body:", text.slice(0, 300));
+}
     
 
     return NextResponse.json({ ok: true }, { status: 200 });
