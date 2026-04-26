@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Logo } from "./Logo";
 import { SITE, NAV_LINKS } from "@/lib/site";
 import { PRODUCT_CATEGORIES } from "@/lib/products";
 
