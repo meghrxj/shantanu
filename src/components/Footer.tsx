@@ -9,7 +9,9 @@ export function Footer() {
       <div className="container-x py-20 lg:py-24">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <Logo variant="cream" />
+            <p className="font-display text-[26px] leading-none tracking-tightish text-cream/85">
+  Shantanu Enterprises
+</p>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed text-cream/65">
               Two decades of single-window industrial supply for Pune&apos;s manufacturers.
             </p>
