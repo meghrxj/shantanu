@@ -1,4 +1,3 @@
-import { PageHero } from "@/components/PageHero";
 import { ContactForm } from "@/components/ContactForm";
 import { SITE } from "@/lib/site";
 
@@ -7,27 +6,22 @@ export const metadata = { title: "Contact" };
 export default function ContactPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Contact"
-        title="Tell us what you need."
-        intro="The fastest way to reach us is the form below. Same-day response on every working enquiry."
-      />
+      <section className="border-b border-line bg-cream">
+        <div className="container-x pt-20 pb-24 lg:pt-28 lg:pb-32">
+          <p className="eyebrow text-ink">Contact</p>
+          <h1 className="mt-6 display-hero">Contact.</h1>
+          <p className="mt-8 max-w-2xl text-[18px] leading-[1.5] text-ink/70 sm:text-[20px]">
+            Tell us what you need. Same-day response.
+          </p>
+        </div>
+      </section>
 
       <section className="section-pad">
         <div className="container-x">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
             <div className="lg:col-span-5">
               <p className="eyebrow text-ink">— Direct lines</p>
-              <h2 className="mt-6 display-h3">
-                We pick up the phone.
-              </h2>
-              <p className="mt-6 text-[15px] leading-relaxed text-ink/65">
-                If your need is urgent, call or WhatsApp us. For
-                everything else, the form on the right reaches the
-                same team within minutes.
-              </p>
-
-              <dl className="mt-12 space-y-8">
+              <dl className="mt-10 space-y-8">
                 <div>
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink/45">
                     Phone
@@ -48,7 +42,7 @@ export default function ContactPage() {
                   <dd className="mt-3">
                     <a
                       href={`mailto:${SITE.email}`}
-                      className="text-[18px] text-ink hover:text-accent"
+                      className="text-[18px] text-ink hover:text-accent break-all"
                     >
                       {SITE.email}
                     </a>
@@ -65,7 +59,7 @@ export default function ContactPage() {
                     Hours
                   </dt>
                   <dd className="mt-3 text-[16px] text-ink/75">
-                    Monday – Saturday · 9:00 AM – 7:00 PM
+                    Mon – Sat · 9 AM – 7 PM
                   </dd>
                 </div>
               </dl>

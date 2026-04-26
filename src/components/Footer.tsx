@@ -11,9 +11,7 @@ export function Footer() {
           <div className="lg:col-span-5">
             <Logo variant="cream" />
             <p className="mt-6 max-w-md text-[15px] leading-relaxed text-cream/65">
-              Two decades of single-window industrial supply across packaging,
-              safety, finishing chemicals and housekeeping for the
-              manufacturers of Pune.
+              Two decades of single-window industrial supply for Pune&apos;s manufacturers.
             </p>
             <div className="mt-8 space-y-2 text-[14px]">
               <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-cream/40">

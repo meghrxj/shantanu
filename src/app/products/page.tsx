@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/CtaBand";
 import { PRODUCT_CATEGORIES } from "@/lib/products";
 
@@ -8,11 +8,15 @@ export const metadata = { title: "Products" };
 export default function ProductsPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Products"
-        title="Four verticals. Two hundred-plus SKUs. One purchase order."
-        intro="The full Shantanu Enterprises catalogue, organised the way a procurement team actually thinks about it. Click any vertical to see its sub-categories and line items."
-      />
+      <section className="border-b border-line bg-cream">
+        <div className="container-x pt-20 pb-24 lg:pt-28 lg:pb-32">
+          <p className="eyebrow text-ink">Products</p>
+          <h1 className="mt-6 display-hero">Products.</h1>
+          <p className="mt-8 max-w-2xl text-[18px] leading-[1.5] text-ink/70 sm:text-[20px]">
+            Four verticals. Two hundred-plus SKUs. One purchase order.
+          </p>
+        </div>
+      </section>
 
       <section className="section-pad">
         <div className="container-x">
@@ -21,9 +25,16 @@ export default function ProductsPage() {
               <Link
                 key={cat.slug}
                 href={`/products/${cat.slug}`}
-                className="group flex flex-col justify-between bg-white p-8 transition-colors duration-300 hover:bg-cream sm:p-12 lg:p-16 lg:min-h-[440px]"
+                className="group bg-white transition-colors duration-300 hover:bg-cream"
               >
-                <div>
+                <div className="aspect-[16/10] w-full overflow-hidden bg-cream">
+                  <img
+                    src={cat.image}
+                    alt={cat.title}
+                    className="h-full w-full object-cover transition-transform duration-700 ease-out-quint group-hover:scale-[1.02]"
+                  />
+                </div>
+                <div className="p-8 sm:p-10">
                   <div className="flex items-start justify-between">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink/40">
                       {cat.number}
@@ -32,16 +43,16 @@ export default function ProductsPage() {
                       {cat.subCategories.length} sub-categories
                     </span>
                   </div>
-                  <h2 className="mt-12 font-display text-[28px] leading-[1.05] tracking-tighter-display text-ink sm:text-[36px] lg:mt-16 lg:text-[44px]">
+                  <h2 className="mt-6 font-display text-[28px] leading-[1.1] tracking-tightish text-ink sm:text-[32px]">
                     {cat.title}
                   </h2>
-                  <p className="mt-5 max-w-md text-[15px] leading-relaxed text-ink/65">
+                  <p className="mt-4 max-w-md text-[15px] leading-relaxed text-ink/65">
                     {cat.intro}
                   </p>
-                </div>
-                <div className="mt-12 inline-flex items-center gap-2 text-[13px] font-semibold tracking-tight text-ink transition-all duration-300 ease-out-quint group-hover:gap-3">
-                  Explore vertical
-                  <span aria-hidden="true">→</span>
+                  <div className="mt-6 inline-flex items-center gap-2 text-[13px] font-semibold tracking-tight text-ink transition-all duration-300 ease-out-quint group-hover:gap-3">
+                    Explore
+                    <span aria-hidden="true">→</span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -50,8 +61,8 @@ export default function ProductsPage() {
       </section>
 
       <CtaBand
-        title="Need a SKU not listed here?"
-        body="With twenty years of supplier relationships, we can almost always source it. Tell us what you need."
+        title="Need a SKU not listed?"
+        body="Twenty years of supplier relationships. We can probably source it."
         primaryLabel="Send an enquiry"
       />
     </>

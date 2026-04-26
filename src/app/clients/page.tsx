@@ -1,37 +1,36 @@
-import { PageHero } from "@/components/PageHero";
+/* eslint-disable @next/next/no-img-element */
 import { CtaBand } from "@/components/CtaBand";
-import { CLIENT_PLACEHOLDER_COUNT } from "@/lib/site";
+import { CLIENT_LOGOS } from "@/lib/site";
 
 export const metadata = { title: "Clients" };
 
 export default function ClientsPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Clients"
-        title="The plants that have grown up with us."
-        intro="A selection of marquee manufacturers across the Pune industrial belt — automotive tier-1s, food &amp; beverage, packaging converters, pharmaceuticals, and engineering — all served on the same single-window basis."
-      />
+      <section className="border-b border-line bg-cream">
+        <div className="container-x pt-20 pb-24 lg:pt-28 lg:pb-32">
+          <p className="eyebrow text-ink">Clients</p>
+          <h1 className="mt-6 display-hero">Clients.</h1>
+          <p className="mt-8 max-w-2xl text-[18px] leading-[1.5] text-ink/70 sm:text-[20px]">
+            The plants that have grown up with us.
+          </p>
+        </div>
+      </section>
 
       <section className="section-pad">
         <div className="container-x">
-          <p className="eyebrow text-ink">— Trusted across Pune&apos;s industrial belt</p>
-          <h2 className="mt-6 max-w-3xl display-h2">
-            Marquee names. <span className="italic">Long-standing relationships.</span>
-          </h2>
-          <p className="mt-8 max-w-2xl text-[16px] leading-relaxed text-ink/65">
-            The company logos below will be added shortly. Until then, the
-            placeholders mark each slot.
-          </p>
-
-          <div className="mt-14 grid grid-cols-2 gap-px bg-line/60 sm:grid-cols-3 lg:grid-cols-5">
-            {Array.from({ length: CLIENT_PLACEHOLDER_COUNT }).map((_, i) => (
+          <div className="grid grid-cols-2 gap-px bg-line/60 sm:grid-cols-3 lg:grid-cols-4">
+            {CLIENT_LOGOS.map((src, i) => (
               <div
                 key={i}
-                className="logo-placeholder aspect-[16/7] bg-cream"
-                aria-label={`Client logo ${i + 1} placeholder`}
+                className="flex aspect-[16/9] items-center justify-center bg-white p-8"
               >
-                <span aria-hidden="true">Logo {String(i + 1).padStart(2, "0")}</span>
+                <img
+                  src={src}
+                  alt=""
+                  aria-hidden="true"
+                  className="max-h-full max-w-full object-contain opacity-80 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0"
+                />
               </div>
             ))}
           </div>
@@ -40,7 +39,6 @@ export default function ClientsPage() {
 
       <CtaBand
         title="Become our next long-standing client."
-        body="Tell us about your plant — what you make, what you need, how often. We&rsquo;ll come back to you the same day."
         primaryLabel="Start a conversation"
       />
     </>

@@ -8,6 +8,7 @@ export type Category = {
   number: string;
   title: string;
   intro: string;
+  image: string;
   subCategories: SubCategory[];
 };
 
@@ -16,8 +17,9 @@ export const PRODUCT_CATEGORIES: Category[] = [
     slug: "packing-materials",
     number: "01",
     title: "Packing Materials",
+    image: "/packaging.png",
     intro:
-      "From hand-grade stretch wrap to imported strapping systems, our packing inventory is structured around how Pune's dispatch teams actually pack. Eight tightly-stocked sub-categories, ready for next-day pickup.",
+      "Stretch wrap to strapping. The consumables that keep dispatch lines moving across Pune.",
     subCategories: [
       {
         title: "Stretch Films & Pallet Wraps",
@@ -93,8 +95,9 @@ export const PRODUCT_CATEGORIES: Category[] = [
     slug: "safety-equipment",
     number: "02",
     title: "Safety Equipment & PPE",
+    image: "/safety.png",
     intro:
-      "ISI-marked, CE-approved, brand-genuine personal protective equipment. Indexed by body zone so your EHS team can re-order without hunting. Eight sub-categories, every major Indian and imported brand.",
+      "ISI-marked, CE-approved, brand-genuine PPE. Indexed by body zone for quick procurement.",
     subCategories: [
       {
         title: "Head Protection",
@@ -220,8 +223,9 @@ export const PRODUCT_CATEGORIES: Category[] = [
     slug: "finishing-chemicals",
     number: "03",
     title: "Finishing & Chemicals",
+    image: "/finishing.png",
     intro:
-      "Industrial chemicals, abrasives, filtration consumables, and workshop tools that finish the parts your customers see. Eight sub-categories matched to typical Pune machine-shop and process-line workflows.",
+      "Industrial chemicals, abrasives, filtration and workshop tools that finish what your customers see.",
     subCategories: [
       {
         title: "Industrial Chemicals & Acids",
@@ -315,8 +319,9 @@ export const PRODUCT_CATEGORIES: Category[] = [
     slug: "housekeeping",
     number: "04",
     title: "Housekeeping & Cleaning",
+    image: "/housekeeping.png",
     intro:
-      "The plant hygiene catalogue, restocked on the same purchase order as your packaging and safety. Six sub-categories covering chemicals, tools, bins, and floor care.",
+      "The plant hygiene catalogue, restocked on the same purchase order as your packaging and safety.",
     subCategories: [
       {
         title: "Cleaning Chemicals & Detergents",
