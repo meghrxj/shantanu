@@ -17,7 +17,7 @@ export function Logo({ variant = "ink", className = "" }: LogoProps) {
       <img
         src="/shantanu-logo.png"
         alt="Shantanu Enterprises"
-        className={`h-9 w-auto sm:h-10 ${invert}`}
+        className={`h-12 w-auto sm:h-14 ${invert}`}
       />
     </a>
   );
